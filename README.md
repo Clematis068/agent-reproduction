@@ -4,10 +4,10 @@ A Claude skill for reproducing LLM-agent / CS papers from their official reposit
 
 It walks through four phases:
 
-1. **Feasibility audit** – data availability, split definitions, official vs. approximate metrics, environment fidelity, coverage gaps, hidden budget dependencies, cost.
-2. **Protocol** – fixed model/decoding/seeds/splits, an in-setting baseline on the same test items, pre-specified endpoint and test.
-3. **Running cheaply and robustly** – pilot runs, process-level parallel evaluation, sleep/network resilience, checkpoint & resume, categorized failure logging.
-4. **Analysis** – paired comparisons with CIs, repeats vs. seeds, winner's-curse caveats, data-defined failure subgroups, implementation-vs-paper audit.
+1. **Feasibility audit** – data and splits (including what the repo's demo data drops), official vs. approximate metrics, environment fidelity, coverage gaps, cost.
+2. **Preparation** – list what may vary, what must stay fixed and how scoring works; check the pipeline stage by stage (parsing, tool execution, scoring, saving, statistics) and report each finding with code location, trigger, effect and a minimal check; in-setting baseline; fake-model pilot.
+3. **Running** – cheap APIs, process-level parallel evaluation, sleep/network resilience, checkpoint & resume, separate task and system failures.
+4. **Analysis** – paired comparisons with CIs, repeats vs. seeds, data-defined failure subgroups, attribution audit for self-improving methods.
 
 ## Install
 
